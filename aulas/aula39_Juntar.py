@@ -14,6 +14,6 @@ def funcao_reduce(acumulador, produto):
     print()
     return acumulador + produto['preco']
 
-total = reduce(funcao_reduce,produtos,0)
+total = reduce(lambda x, p: x + p['preco'],produtos,0)
 
 print(total)
